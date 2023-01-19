@@ -8,6 +8,8 @@ using System.Xml.Linq;
 
 namespace Application
 {
+    // Основная логика приложения, совершает запрос информации о фильме в БД, фильтр случайных отзывов
+    // и запрос вывода их на экран
     internal class MovieApp
     {
         private IFetchMovieReviews fetchMovieReviews;
@@ -20,6 +22,7 @@ namespace Application
             this.printMovieReviews = printMovieReviews;
         }
 
+        // Метод FilterRandomReviews отвечает за отбор из списка отзывов 5 случайных
         private List<MovieReview> FilterRandomReviews(List<MovieReview> movieReviewList)
         {
             List<MovieReview> result = new List<MovieReview>();
@@ -41,6 +44,9 @@ namespace Application
             return rand.Next(size);
         }
 
+        /* Метод Accept инициирует запрос всех отзывов по конкретному фильму в БД,
+         * запрашивает отбор случайных и запрос вывода их на экран
+         */
         public void Accept(MovieSearchRequest movieSearchRequest)
         {
             List<MovieReview> movieReviewList = fetchMovieReviews.FetchMovieReviews(movieSearchRequest);

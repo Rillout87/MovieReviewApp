@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application
 {
+    // Интерфейс описывает метод запроса в БД
     internal interface IFetchMovieReviews
     {
         public List<MovieReview> FetchMovieReviews(MovieSearchRequest movieSearchRequest);

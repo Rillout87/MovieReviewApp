@@ -3,6 +3,7 @@ using Application;
 
 namespace Adapters
 {
+    // Класс ConsolePrinter отвечает за вывод информации и отзывов о фильме в консоль
     internal class ConsolePrinter : IPrintMovieReviews
     {
 

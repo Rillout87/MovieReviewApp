@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
+    // Класс Model моделирует основную логику приложения и запускает поиск отзывов
     internal class Model
     {
         private MovieApp movieApp;
@@ -16,6 +17,7 @@ namespace Domain
             this.movieApp = movieApp;
         }
 
+        // Метод запускает поиск отзывов
         public void Run(MovieSearchRequest movieSearchRequest)
         {
             movieApp.Accept(movieSearchRequest);

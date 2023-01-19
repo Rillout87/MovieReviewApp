@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
+    // Класс MovieSearchRequest отвечает за инкапсуляцию запроса от пользователя
     internal class MovieSearchRequest
     {
         private string request;

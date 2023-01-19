@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
+    // Класс MovieReview отвечает за создания отдельного отзыва
     internal class MovieReview
     {
         private string movieName;
@@ -19,6 +20,7 @@ namespace Domain
             this.remark = remark;
         }
 
+        // Переопределили метод ToString() для кастомного отображения отзывов о фильмах
         public override string ToString()
         {
             return " " + movieScore + " " + remark;

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application
 {
+    // Интерфейс описывает метод отлова запроса от пользователя
     internal interface IUserInput
     {
         public void HandleUserInput(Object userCommand);

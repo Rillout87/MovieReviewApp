@@ -4,8 +4,9 @@ using Domain;
 
 internal class Program
 {
+    /*Метод Main отвечает за выполнение программы*/
     private static void Main(string[] args)
-    {
+    {   
         IFetchMovieReviews fetchMovieReviews = new MovieReviewsRepo();
         IPrintMovieReviews printMovieReviews = new ConsolePrinter();
         IUserInput userCommand = new UserCommand(fetchMovieReviews, printMovieReviews);

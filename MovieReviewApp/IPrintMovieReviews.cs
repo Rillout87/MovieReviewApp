@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace Application
 {
+    // Интерфейс описывает метод вывода списка отзывов на экран
     internal interface IPrintMovieReviews
     {
         public void WriteMovieReviews(List<MovieReview> movieReviewList);
